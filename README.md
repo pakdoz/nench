@@ -43,12 +43,9 @@ harddisk and network for up to several minutes).
 Usage example
 -------------
 
-```
-(curl -s wget.racing/nench.sh | bash; curl -s wget.racing/nench.sh | bash) 2>&1 | tee nench.log
-```
 
 ```
-(wget -qO- wget.racing/nench.sh | bash; wget -qO- wget.racing/nench.sh | bash) 2>&1 | tee nench.log
+(wget -qO- raw.githubusercontent.com/pakdoz/nench/master/nench.sh | bash; wget -qO- raw.githubusercontent.com/pakdoz/nench/master/nench.sh | bash) 2>&1 | tee nench.log
 ```
 
 Example output
