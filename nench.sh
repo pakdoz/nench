@@ -267,12 +267,12 @@ then
     download_benchmark -4 http://speedtest.dal01.softlayer.com/downloads/test100.zip | \
         Bps_to_MiBps
 
-    printf '    Online.net (FR):      '
-    download_benchmark -4 http://ping.online.net/100Mo.dat | \
+    printf '    Dediserve Singapore (SG):      '
+    download_benchmark -4 http://speedtest.c1.sin1.dediserve.com/100MB.test | \
         Bps_to_MiBps
 
-    printf '    OVH BHS (CA):         '
-    download_benchmark -4 http://proof.ovh.ca/files/100Mio.dat | \
+    printf '    Dediserve Jakarta (ID):         '
+    download_benchmark -4 http://speedtest.c1.jkt1.dediserve.com/100MB.test | \
         Bps_to_MiBps
 
 else
@@ -296,12 +296,12 @@ then
     download_benchmark -6 http://speedtest.dal01.softlayer.com/downloads/test100.zip | \
         Bps_to_MiBps
 
-    printf '    Online.net (FR):      '
-    download_benchmark -6 http://ping6.online.net/100Mo.dat | \
+    printf '    Dediserve Sisngapore (SG):      '
+    download_benchmark -6 http://speedtest.c1.sin1.dediserve.com/100MB.test | \
         Bps_to_MiBps
 
-    printf '    OVH BHS (CA):         '
-    download_benchmark -6 http://proof.ovh.ca/files/100Mio.dat | \
+    printf '    Dediserve Jakarta (ID):         '
+    download_benchmark -6 http://speedtest.c1.jkt1.dediserve.com/100MB.test | \
         Bps_to_MiBps
 
 else
