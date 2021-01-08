@@ -300,20 +300,36 @@ then
     printf '    your IPv6:    %s\n' "$(redact_ip "$ipv6")"
     printf '\n'
 
+    printf '    Cachefly CDN:         '
+    download_benchmark -6 http://cachefly.cachefly.net/100mb.test | \
+        Bps_to_MiBps
+
     printf '    Leaseweb (NL):        '
     download_benchmark -6 http://mirror.nl.leaseweb.net/speedtest/100mb.bin | \
         Bps_to_MiBps
 
-    printf '    Softlayer DAL (US):   '
-    download_benchmark -6 http://speedtest.dal01.softlayer.com/downloads/test100.zip | \
+    printf '    DigitalOcean NY (US):   '
+    download_benchmark -6 http://speedtest-nyc1.digitalocean.com/100mb.test | \
+        Bps_to_MiBps
+        
+    printf '    DigitalOcean SG (SG):   '
+    download_benchmark -6 http://speedtest-sgp1.digitalocean.com/100mb.test | \
         Bps_to_MiBps
 
-    printf '    Dediserve Sisngapore (SG):      '
+    printf '    Dediserve Singapore (SG):      '
     download_benchmark -6 http://speedtest.c1.sin1.dediserve.com/100MB.test | \
         Bps_to_MiBps
 
     printf '    Dediserve Jakarta (ID):         '
     download_benchmark -6 http://speedtest.c1.jkt1.dediserve.com/100MB.test | \
+        Bps_to_MiBps
+    
+     printf '    DewaWeb Jakarta (ID):         '
+    download_benchmark -6 https://dci-speedtest.dewaweb.com/50mb-testfile.zip | \
+        Bps_to_MiBps
+        
+     printf '    TurboNet Surabaya (ID):         '
+    download_benchmark -6 http://foobar.turbo.net.id/alpine/latest-stable/releases/armhf/alpine-rpi-3.12.3-armhf.tar.gz | \
         Bps_to_MiBps
 
 else
